@@ -1,0 +1,24 @@
+<section class="newUserBg">
+	<a href="#" class="newUserLink">S'enregistrer</a>
+	<form action="/user/create" method="POST" class="formNewUser">
+		<h1>S'enregistrer</h1>
+
+		<input id="username" type="text" name="username" placeholder="Username" class="form-inputNewUser"/>
+		<br/>
+		<input id="firstname" type="text" name="firstname" placeholder="Firstname" class="form-inputNewUser"/>
+		<br/>
+		<input id="lastname" type="text" name="lastname" placeholder="Lastname" class="form-inputNewUser"/>
+		<br/>
+		<input id="email" type="email" name="email" placeholder="E-mail" class="form-inputNewUser"/>
+		<br/>
+		<input id="password" type="password" name="password" placeholder="Password" class="form-inputNewUser"/>
+		<br/>
+		<input id="confirmation" type="password" name="confirmPassword" placeholder="Confirm Password" class="form-inputNewUser"/>
+		<br/>
+		<div class="button_newUser">
+			<input name='cancelNewUser' type="button" value="Annuler" class="btnCancel_newUser btn_newUser" />
+			<input name='sendNewUser' id='btnSend' type="submit" value="Envoyer" class="btnSend_newUser btn_newUser" />
+		</div>
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	</form>
+</section>
