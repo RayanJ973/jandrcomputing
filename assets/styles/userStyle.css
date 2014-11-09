@@ -1,14 +1,3 @@
-
-.newUserBg {
-	min-height: 100%;
-	width: 100%;
-	height: auto;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #003FFF;
-}
-
 .form-inputNewUser {
 	background: #FFFFFF;
     font-size: 0.8rem;
@@ -51,6 +40,7 @@ inputs-moz-placeholder {
 	border-width: 1px;
 	border-style: solid;
 	display: none;
+	font-family: 'sans-serif';
 }
 
 .formNewUser h1 {
@@ -103,7 +93,49 @@ inputs-moz-placeholder {
 	font-family: 'comic sans ms';
 	font-size: 15px;
 	text-decoration: none;
-	position: absolute;
-	top: 10px;
-	right: 10px;
+}
+
+.formNewUser ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.formNewUser ul li {
+	font-size: 10px;
+	margin: 10px 20px;
+}
+
+.pwdInfo, .pwdInfo2, .usrInfo, .emailInfo {
+	width: 300px;
+	padding: 15px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background: #fefefe;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px #ccc;
+	border: 1px solid #ddd;
+	display: none;
+}
+
+.invalid {
+	background:url(/images/invalid.png) no-repeat 0 50%;
+	background-size: 12px;
+	padding-left:22px;
+	line-height:24px;
+	color:#ec3f41;
+}
+
+.valid {
+	background:url(/images/valid.png) no-repeat 0 50%;
+	background-size: 12px;
+	padding-left:22px;
+	line-height:24px;
+	color:#3a7d34;
+}
+
+.errorSubmit {
+	background-color: red;
+	color: white;
+	display: none;
 }

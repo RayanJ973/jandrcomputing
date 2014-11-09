@@ -1,19 +1,49 @@
-<section class="newUserBg">
+<body style="background-color: #003FFF;">
 	<a href="#" class="newUserLink">S'enregistrer</a>
 	<form action="/user/create" method="POST" class="formNewUser">
 		<h1>S'enregistrer</h1>
-
+		<div class="errorSubmit"></div>
 		<input id="username" type="text" name="username" placeholder="Username" class="form-inputNewUser"/>
+		<div class="usrInfo">
+			<ul>
+				<li id="letter3" class="invalid">Doit avoir au moins <strong>une lettre</strong></li>
+				<li id="capital3" class="invalid">Doit avoir au moins <strong>une lettre en majuscule</strong></li>
+				<li id="number3" class="invalid">Doit avoir au moins <strong>un chiffre</strong></li>
+				<li id="length3" class="invalid">Doit avoir au moins <strong>5 caractères</strong></li>
+			</ul>
+		</div>
 		<br/>
 		<input id="firstname" type="text" name="firstname" placeholder="Firstname" class="form-inputNewUser"/>
 		<br/>
 		<input id="lastname" type="text" name="lastname" placeholder="Lastname" class="form-inputNewUser"/>
 		<br/>
 		<input id="email" type="email" name="email" placeholder="E-mail" class="form-inputNewUser"/>
+		<div class="emailInfo">
+			<ul>
+				<li id="emailInfoText" class="invalid">Doit être de ce format: <strong>mail@domaine.com</strong></li>
+			</ul>
+		</div>
 		<br/>
 		<input id="password" type="password" name="password" placeholder="Password" class="form-inputNewUser"/>
+		<div class="pwdInfo">
+			<ul>
+				<li id="letter" class="invalid">Doit avoir au moins <strong>une lettre</strong></li>
+				<li id="capital" class="invalid">Doit avoir au moins <strong>une lettre en majuscule</strong></li>
+				<li id="number" class="invalid">Doit avoir au moins <strong>un chiffre</strong></li>
+				<li id="length" class="invalid">Doit avoir au moins <strong>5 caractères</strong></li>
+			</ul>
+		</div>
 		<br/>
 		<input id="confirmation" type="password" name="confirmPassword" placeholder="Confirm Password" class="form-inputNewUser"/>
+		<div class="pwdInfo2">
+			<ul>
+				<li id="letter2" class="invalid">Doit avoir au moins <strong>une lettre</strong></li>
+				<li id="capital2" class="invalid">Doit avoir au moins <strong>une lettre en majuscule</strong></li>
+				<li id="number2" class="invalid">Doit avoir au moins <strong>un chiffre</strong></li>
+				<li id="length2" class="invalid">Doit avoir au moins <strong>5 caractères</strong></li>
+				<li id="equal" class="invalid">Identique <strong>au mot de passe précédent</strong></li>
+			</ul>
+		</div>
 		<br/>
 		<div class="button_newUser">
 			<input name='cancelNewUser' type="button" value="Annuler" class="btnCancel_newUser btn_newUser" />
@@ -21,4 +51,4 @@
 		</div>
 		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 	</form>
-</section>
+</body>
