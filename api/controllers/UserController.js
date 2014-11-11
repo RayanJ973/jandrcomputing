@@ -22,7 +22,17 @@ module.exports = {
 			};
 			
 			//en cas de réussite, affichage de user en json
-			res.redirect('/user');
+			res.redirect('/user/show/'+ user.id);
+		});
+	},
+
+	show: function(req, res, next) {
+		User.findOne(req.param('id'), function foundUser (error, user) {
+			if (error) return next(error);
+			if (!user) return next();
+			res.view('jandrUser/show.ejs', {
+				user: user
+			});
 		});
 	}
 

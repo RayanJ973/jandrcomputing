@@ -48,6 +48,10 @@ module.exports.routes = {
   '/user/create': {
     controller: 'UserController',
     action: 'create'
+  },
+
+  '/user/menu': {
+    view: 'jandrUser/menu'
   }
 
   /***************************************************************************
