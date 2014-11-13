@@ -28,7 +28,7 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-  localDiskDb: {
+  /*localDiskDb: {
     adapter: 'sails-disk'
   },
 
@@ -40,7 +40,7 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-  mysql: {
+  /*mysql: {
     adapter: 'sails-mysql',
     host: 'localhost',
     port: 3306,
@@ -57,7 +57,7 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
+  /*someMongodbServer: {
     adapter: 'sails-mongo',
     host: 'localhost',
     port: 27017,
@@ -75,7 +75,7 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
+  /*somePostgresqlServer: {
     adapter: 'sails-postgresql',
     host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
     user: 'YOUR_POSTGRES_USER',

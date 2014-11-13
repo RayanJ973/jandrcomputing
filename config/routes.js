@@ -52,6 +52,26 @@ module.exports.routes = {
 
   '/user/menu': {
     view: 'jandrUser/menu'
+  },
+
+  '/user/list': {
+    controller: 'UserController',
+    action: 'index'
+  },
+
+  '/user/edit/:id': {
+    controller: 'UserController',
+    action: 'edit'
+  },
+
+  '/user/update/:id': {
+    controller: 'UserController',
+    action: 'update'
+  },
+
+  '/user/delete/:id': {
+    controller: 'UserController',
+    action: 'delete'
   }
 
   /***************************************************************************

@@ -1,0 +1,9 @@
+<form action="/user/update/<%= user.id %>" method="POST">
+	<h2>Modification de <%= user.username %></h2>
+	<input value="<%= user.username %>" name="username" type="text"/>
+	<input value="<%= user.firstname %>" name="firstname" type="text"/>
+	<input value="<%= user.lastname %>" name="lastname" type="text"/>
+	<input value="<%= user.email %>" name="email" type="email"/>
+	<input type="submit" value="Mettre à jour"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>

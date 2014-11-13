@@ -78,14 +78,18 @@ inputs-moz-placeholder {
 	margin-left: 120px;
 }
 
-.alert-newUser {
-	background-color: rgba(215, 44, 44, 0.3);
+.error-newUser {
+	background-color: #BD3A3A;
 	font-family: 'sans-serif';
 	color: white;
 	border-width: 2px;
-	border-color: rgba(145, 1, 0, 0.7);
+	border-color: #620000;
 	border-radius: 5px;
 	border-style: solid;
+	padding: 2px;
+	text-align: center;
+	font-size: 12px;
+	display: none;
 }
 
 .newUserLink {
@@ -132,10 +136,4 @@ inputs-moz-placeholder {
 	padding-left:22px;
 	line-height:24px;
 	color:#3a7d34;
-}
-
-.errorSubmit {
-	background-color: red;
-	color: white;
-	display: none;
 }

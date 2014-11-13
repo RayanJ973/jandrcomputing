@@ -1,9 +1,9 @@
-<body style="background-color: #003FFF;">
+<body style="background-color: #0087FF;">
 	<a href="#" class="newUserLink">S'enregistrer</a>
-	<form action="/user/create" method="POST" class="formNewUser">
+	<form id="formNew" action="/user/create" method="POST" class="formNewUser">
 		<h1>S'enregistrer</h1>
-		<div class="errorSubmit"></div>
-		<input id="username" type="text" name="username" placeholder="Username" class="form-inputNewUser"/>
+		<p class="error-newUser" id="errorMessageBox"></p>
+		<input id="username" type="text" name="username" placeholder="Username" class="form-inputNewUser" autocomplete="off"/>
 		<div class="usrInfo">
 			<ul>
 				<li id="letter3" class="invalid">Doit avoir au moins <strong>une lettre</strong></li>
@@ -13,11 +13,11 @@
 			</ul>
 		</div>
 		<br/>
-		<input id="firstname" type="text" name="firstname" placeholder="Firstname" class="form-inputNewUser"/>
+		<input id="firstname" type="text" name="firstname" placeholder="Firstname" class="form-inputNewUser" autocomplete="off"/>
 		<br/>
-		<input id="lastname" type="text" name="lastname" placeholder="Lastname" class="form-inputNewUser"/>
+		<input id="lastname" type="text" name="lastname" placeholder="Lastname" class="form-inputNewUser" autocomplete="off"/>
 		<br/>
-		<input id="email" type="email" name="email" placeholder="E-mail" class="form-inputNewUser"/>
+		<input id="email" type="text" name="email" placeholder="E-mail" class="form-inputNewUser" autocomplete="off"/>
 		<div class="emailInfo">
 			<ul>
 				<li id="emailInfoText" class="invalid">Doit être de ce format: <strong>mail@domaine.com</strong></li>
@@ -49,6 +49,6 @@
 			<input name='cancelNewUser' type="button" value="Annuler" class="btnCancel_newUser btn_newUser" />
 			<input name='sendNewUser' id='btnSend' type="submit" value="Envoyer" class="btnSend_newUser btn_newUser" />
 		</div>
-		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+		<input id="csrfInput" type="hidden" name="_csrf" value="<%= _csrf %>" />
 	</form>
 </body>
