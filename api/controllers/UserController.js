@@ -40,7 +40,7 @@
 		});
 	},
 
-	index: function(req, res, next) {
+	list: function(req, res, next) {
 		User.find(function foundUsers (error, users) {
 			return res.view('jandrUser/list.ejs', {
 				users: users
@@ -79,7 +79,10 @@
 
 			return res.redirect('/user/list');
 		})
-	}
+	},
 
+	index: function(req, res, next) {
+		return res.redirect('/user/list');
+	}
 };
 
